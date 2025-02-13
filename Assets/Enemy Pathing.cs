@@ -27,7 +27,7 @@ public class Enemypathing : MonoBehaviour
         Transform targetWaypoint = waypoints[currentWaypointIndex];
         transform.position = Vector3.MoveTowards(transform.position, targetWaypoint.position, speed * Time.deltaTime);
 
-        // Checking if it reached checkpoint
+        // doouble checking if it reached checkpoint
         if (Vector3.Distance(transform.position, targetWaypoint.position) < 0.2f)
         {
             currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length; // repeat to check if it dies propperly
