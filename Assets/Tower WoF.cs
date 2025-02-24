@@ -4,15 +4,42 @@ using UnityEngine;
 
 public class TowerWoF : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float attackRange = 5f;
+    public float attackRate = 1f;
+    public string enemyTag = "Enemy";
+    private float nextAttackTime = 0f;
+
     void Start()
     {
-        //black moneys
+        // Initialization if needed
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Time.time >= nextAttackTime)
+        {
+            Attack();
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
+    }
+
+    void Attack()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRange);
+        foreach (var hitCollider in hitColliders)
+        {
+            if (hitCollider.CompareTag(enemyTag))
+            {
+                // Implement your attack logic here
+                Debug.Log("Attacking enemy: " + hitCollider.name);
+                // Example: hitCollider.GetComponent<Enemy>().TakeDamage(damage);
+            }
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }
