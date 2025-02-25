@@ -2,17 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WoFTower : MonoBehaviour
+public class TowerBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float range = 5f;
+    public float fireRate = 1f;
+    private float fireCooldown = 0f;
+
+    public GameObject Bullet; 
+    public Transform shootingPoint;
+
+    private void Update()
     {
-        
+        fireCooldown -= Time.deltaTime;
+
+        if (fireCooldown <= 0f)
+        {
+            Fire();
+            fireCooldown = fireRate;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Fire()
     {
-        
+        if (Bullet != null && shootingPoint != null)
+        {
+            Instantiate(Bullet, shootingPoint.position, Quaternion.identity);
+        }
     }
 }
