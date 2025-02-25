@@ -33,19 +33,4 @@ public class Enemypathing : MonoBehaviour
             currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length; // repeat to check if it dies propperly
         }
     }
-    public void TakeDamage(float damage)
-    {
-        MobHealth -= damage;
-
-        if (MobHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        //kill object if hp is 0
-        Destroy(gameObject);
-    }
 }
