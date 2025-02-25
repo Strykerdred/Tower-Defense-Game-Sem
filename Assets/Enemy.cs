@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemypathing : MonoBehaviour
+public class Enemy : MonoBehaviour
 
 {
 
@@ -32,5 +32,21 @@ public class Enemypathing : MonoBehaviour
         {
             currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length; // repeat to check if it dies propperly
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        MobHealth -= damage;
+
+        if (MobHealth <= 0) //check if hp is 0
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        //destoy unit
+        Destroy(gameObject);
     }
 }
