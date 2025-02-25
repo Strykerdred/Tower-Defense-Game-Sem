@@ -260,7 +260,6 @@ GameObject:
   - component: {fileID: 655249570}
   - component: {fileID: 655249569}
   - component: {fileID: 655249568}
-  - component: {fileID: 655249567}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Enemy
@@ -268,23 +267,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &655249567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655249566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b047d86db5621e40bfca714ec06777a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 1034616867}
-  - {fileID: 906144779}
-  speed: 5
-  MobHealth: 10
 --- !u!65 &655249568
 BoxCollider:
   m_ObjectHideFlags: 0
