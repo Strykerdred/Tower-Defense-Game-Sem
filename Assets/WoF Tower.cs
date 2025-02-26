@@ -33,8 +33,11 @@ public class TowerBehavior : MonoBehaviour
         // no shoot if no enemies
         if (enemies.Length == 0) return null;
 
-        // looks for close target
-        return enemies.OrderBy(e => Vector3.Distance(transform.position, e.transform.position)).First().transform;
+        // looks for close target within range
+        return enemies
+            .Where(e => Vector3.Distance(transform.position, e.transform.position) <= range)
+            .OrderBy(e => Vector3.Distance(transform.position, e.transform.position))
+            .FirstOrDefault()?.transform;
     }
 
     void Fire(Transform targetEnemy)
