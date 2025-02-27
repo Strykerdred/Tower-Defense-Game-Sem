@@ -30,7 +30,7 @@ public class MainBase : MonoBehaviour
         Debug.Log("bababooey");
 
         // Get the Enemypathing component from the enemy object
-        Enemypathing enemyScript = enemy.GetComponent<Enemypathing>();
+        Enemy enemyScript = enemy.GetComponent<Enemy>();
 
         if (enemyScript != null)  // Ensure the exists
         {
