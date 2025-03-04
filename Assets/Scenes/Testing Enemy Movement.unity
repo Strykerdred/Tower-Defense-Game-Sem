@@ -705,7 +705,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
       propertyPath: MobHealth
-      value: 100
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
       propertyPath: waypoints.Array.size
