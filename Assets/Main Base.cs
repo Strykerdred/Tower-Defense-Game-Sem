@@ -27,7 +27,7 @@ public class MainBase : MonoBehaviour
     }
     void KillUnit(GameObject enemy)
     {
-        Debug.Log("bababooey");
+        Debug.Log("Damage Taken");
 
         // Get the Enemypathing component from the enemy object
         Enemy enemyScript = enemy.GetComponent<Enemy>();
