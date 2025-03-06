@@ -39,7 +39,7 @@ public class Projectile : MonoBehaviour
                 enemy.TakeDamage(damage);
             }
 
-            Destroy(gameObject); // Destroy bullet on hit
+            Destroy(gameObject); // destory the projectile when it touches enemy
         }
     }
 }

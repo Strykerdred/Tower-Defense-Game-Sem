@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MainBase : MonoBehaviour
@@ -37,7 +38,7 @@ public class MainBase : MonoBehaviour
             TakeDamage((int)enemyScript.MobHealth); //Convert float to int
         }
 
-        Destroy(enemy);
+        enemyScript.Die();
     }
 
     public void TakeDamage(int Damage)

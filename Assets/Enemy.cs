@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform[] waypoints; // This will now be assigned dynamically
+    public Transform[] waypoints;
     public float speed = 5f;
     private int currentWaypointIndex = 0;
     public float MobHealth = 10f;
     private float countdown = 10f;
-    public WaveSpawner waveSpawner; // WaveSpawner reference assigned on spawn
+    public WaveSpawner waveSpawner; // WaveSpawner reference
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
         if (waypoints == null || waypoints.Length == 0)
         {
             Debug.LogWarning($"{gameObject.name} has no waypoints assigned!");
-            return; // Don't move if there are no waypoints
+            return; // wont move if it doesnt have waypoint
         }
 
         countdown -= Time.deltaTime;
@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
         Destroy(gameObject);

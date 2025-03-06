@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
+        print(waves[currentWaveIndex].enemiesLeft);
         if (currentWaveIndex >= waves.Length)
         {
             Debug.Log("You survived every wave!");
@@ -54,7 +56,7 @@ public class WaveSpawner : MonoBehaviour
             {
                 Enemy enemy = Instantiate(waves[currentWaveIndex].enemies[i], spawnPoint.transform.position, spawnPoint.transform.rotation);
                 
-                // Assign Waypoints and WaveSpawner
+                // Assign waypoint & wavespawner
                 enemy.waypoints = waypoints; 
                 enemy.waveSpawner = this; 
 
@@ -67,8 +69,8 @@ public class WaveSpawner : MonoBehaviour
 [System.Serializable]
 public class Wave
 {
-    public Enemy[] enemies;        // Array of enemy prefabs
-    public float timeToNextEnemy;  // Time between enemy spawns
-    public float timeToNextWave;   // Time until next wave starts
-    [HideInInspector] public int enemiesLeft; // Hidden inspector variable to count enemies
+    public Enemy[] enemies;
+    public float timeToNextEnemy;  // time between each enemy
+    public float timeToNextWave;   // time until next wave
+    [HideInInspector] public int enemiesLeft;
 }
