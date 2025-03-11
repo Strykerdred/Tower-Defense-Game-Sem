@@ -203,6 +203,10 @@ MonoBehaviour:
     - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
     - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
     - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
+    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
+    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
+    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
+    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
     timeToNextEnemy: 1
     timeToNextWave: 1
     enemiesLeft: 0
