@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    //minor testing and changes
     public Transform[] waypoints;
     public float speed = 5f;
     private int currentWaypointIndex = 0;
