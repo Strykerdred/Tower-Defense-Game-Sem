@@ -192,21 +192,17 @@ MonoBehaviour:
   - {fileID: 1493283496}
   waves:
   - enemies:
-    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
-    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
-    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
-    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
+    - {fileID: 1121414137296155751, guid: 2be026ef43d52fb4d9e130cd4270a6a3, type: 3}
+    - {fileID: 1121414137296155751, guid: 2be026ef43d52fb4d9e130cd4270a6a3, type: 3}
+    - {fileID: 1121414137296155751, guid: 2be026ef43d52fb4d9e130cd4270a6a3, type: 3}
     timeToNextEnemy: 1
     timeToNextWave: 1
     enemiesLeft: 0
   - enemies:
+    - {fileID: 1121414137296155751, guid: cdf453497b166bd4a976ab8aa93c5911, type: 3}
     - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
-    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
-    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
-    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
-    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
-    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
-    - {fileID: 1121414137296155751, guid: 0ca75189a1067b34eb9c72b641e0eb9a, type: 3}
+    - {fileID: 1121414137296155751, guid: 4854829597f57524d918aaf1ebc9c9c8, type: 3}
+    - {fileID: 1121414137296155751, guid: 4854829597f57524d918aaf1ebc9c9c8, type: 3}
     timeToNextEnemy: 1
     timeToNextWave: 1
     enemiesLeft: 0

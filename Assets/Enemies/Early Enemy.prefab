@@ -123,7 +123,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  speed: 3
+  speed: 2
   MobHealth: 5
   waveSpawner: {fileID: 0}
 --- !u!54 &5450990622706071955
