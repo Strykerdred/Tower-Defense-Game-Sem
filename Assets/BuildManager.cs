@@ -6,7 +6,7 @@ public class BuildManager : MonoBehaviour
 
     public static BuildManager instance;
 
-    void Awake()
+    void awake()
     {
         if (instance != null)
         {
@@ -23,8 +23,7 @@ public class BuildManager : MonoBehaviour
     public GameObject TowerFrozone;
 
     private GameObject turretToBuild;
-
-    public GameObject getTurretToBuild ()
+    public GameObject GetTurretToBuild ()
     {
         return turretToBuild;
     }

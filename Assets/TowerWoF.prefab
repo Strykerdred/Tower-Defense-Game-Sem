@@ -1273,7 +1273,7 @@ GameObject:
   - component: {fileID: 2988361586783604076}
   - component: {fileID: 1579252957092637034}
   m_Layer: 0
-  m_Name: WoF
+  m_Name: TowerWoF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

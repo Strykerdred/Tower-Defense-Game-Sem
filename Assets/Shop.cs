@@ -4,7 +4,7 @@ public class Shop : MonoBehaviour {
 
     BuildManager buildManager;
 
-    void Start()
+    void Awake()
     {
         buildManager = BuildManager.instance;
     }

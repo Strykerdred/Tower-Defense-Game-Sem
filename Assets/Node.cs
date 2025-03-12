@@ -3,26 +3,51 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
+
     private GameObject turret;
+
+    public Color hoverColor;
+    public Vector3 positionOffset;
+
+    private Renderer rend;
+    private Color startColor;
 
     BuildManager buildManager;
 
-    private void Start()
+    void Start()
     {
+        rend = GetComponent<Renderer>();
+        startColor = rend.material.color;
+
         buildManager = BuildManager.instance;
     }
-    void onMouseDown()
+
+    void OnMouseDown()
     {
-        if (buildManager.getTurretToBuild() == null)
+        if (buildManager.GetTurretToBuild() == null)
             return;
 
-        if (turret!= null)
+        if (turret != null)
         {
             Debug.Log("Hell no");
             return;
         }
 
-        GameObject turretToBuild = buildManager.getTurretToBuild();
-        turret = (GameObject) Instantiate(turretToBuild);
+        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+        turret = Instantiate(turretToBuild, transform.position + positionOffset, Quaternion.identity);
+
+    }
+
+    void OnMouseEnter()
+    {
+        if (buildManager.GetTurretToBuild() == null)
+            return;
+
+        rend.material.color = hoverColor;
+    }
+
+    void OnMouseExit()
+    {
+        rend.material.color = startColor;
     }
 }
