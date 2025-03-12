@@ -878,7 +878,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373014352}
   m_CullTransparentMesh: 1
---- !u!1 &464816867
+--- !u!1 &666829400
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -886,47 +886,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 464816869}
-  - component: {fileID: 464816868}
+  - component: {fileID: 666829402}
+  - component: {fileID: 666829401}
   m_Layer: 0
-  m_Name: ShopManager
+  m_Name: GameMaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &464816868
+--- !u!114 &666829401
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464816867}
+  m_GameObject: {fileID: 666829400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e8ec4251c8270419a0d615c371709b, type: 3}
+  m_Script: {fileID: 11500000, guid: aa1202034bd109b45a3f57388b24ed1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefabs:
-  - {fileID: 6793761446035037763, guid: 0d28a64e1e29524479fe4ef3d38ed053, type: 3}
-  - {fileID: 2416207089498321335, guid: a875fcaae2078e7479e21c3ec698b7d3, type: 3}
-  - {fileID: 7322944274685666034, guid: f18fb7899858ad44b9b44a5ccd783187, type: 3}
-  - {fileID: 8496443892421943637, guid: 9f9229c06e14c7e408b50537d2b7df10, type: 3}
-  - {fileID: 6883320787051787202, guid: 2b1fc45b14a8b1e488a0bb95bafbd3d3, type: 3}
-  spawnPoint: {fileID: 941482253}
-  shopButtons:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!4 &464816869
+  TowerWoF: {fileID: 6793761446035037763, guid: 0d28a64e1e29524479fe4ef3d38ed053, type: 3}
+  TowerPyro: {fileID: 2416207089498321335, guid: a875fcaae2078e7479e21c3ec698b7d3, type: 3}
+  TowerClodsire: {fileID: 7322944274685666034, guid: f18fb7899858ad44b9b44a5ccd783187, type: 3}
+  TowerChief: {fileID: 8496443892421943637, guid: 9f9229c06e14c7e408b50537d2b7df10, type: 3}
+  TowerFrozone: {fileID: 6883320787051787202, guid: 2b1fc45b14a8b1e488a0bb95bafbd3d3, type: 3}
+--- !u!4 &666829402
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464816867}
+  m_GameObject: {fileID: 666829400}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 834.27875, y: 225.34637, z: -443.64734}
+  m_LocalPosition: {x: -139.57079, y: -77.609375, z: -119.25126}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1368,37 +1363,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &941482252
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 941482253}
-  m_Layer: 0
-  m_Name: Test Tower Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &941482253
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941482252}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.677, y: -0, z: 2.246}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,6 +1704,7 @@ GameObject:
   - component: {fileID: 1394910832}
   - component: {fileID: 1394910831}
   - component: {fileID: 1394910830}
+  - component: {fileID: 1394910833}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -1822,6 +1787,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1394910833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394910829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f546ee489b7c6648b4d057026cf90b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1441760717
 GameObject:
   m_ObjectHideFlags: 0
@@ -3347,5 +3324,4 @@ SceneRoots:
   - {fileID: 1441760718}
   - {fileID: 1560652671}
   - {fileID: 937160260}
-  - {fileID: 464816869}
-  - {fileID: 941482253}
+  - {fileID: 666829402}
