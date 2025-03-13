@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    //minor testing and changes
     public Transform[] waypoints;
     public float speed = 5f;
     private int currentWaypointIndex = 0;
     public float MobHealth = 10f;
     private float countdown = 10f;
     public WaveSpawner waveSpawner; // WaveSpawner reference
+    public int moneyValue = 10;
+    public MainBase mainBase;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,12 @@ public class Enemy : MonoBehaviour
         {
             Debug.LogWarning($"{gameObject.name} has no WaveSpawner assigned!");
         }
+        if(mainBase == null)
+        {
+            mainBase = FindObjectOfType<MainBase>();
+        }
     }
+
 
     // Update is called once per frame
     void Update()
@@ -56,9 +62,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
+
     public void Die()
     {
         waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
+        mainBase.money += moneyValue;
         Destroy(gameObject);
     }
 }

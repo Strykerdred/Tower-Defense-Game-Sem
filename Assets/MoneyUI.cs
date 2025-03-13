@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class HealthUI : MonoBehaviour
+public class MoneyUI : MonoBehaviour
 {
     public MainBase mainBase; // reference to the MainBase script
-    public TextMeshProUGUI healthText; // reference to the ui text
+    public TextMeshProUGUI Moneytext; // reference to the ui text
 
     // Start is called before the first frame update
     void Start()
     {
-
+       UpdateMoneyUI();
     }
 
     void Update()
     {
-        if (mainBase != null && healthText != null)
-        {
-            healthText.text = ": " + mainBase.health;
-        }
+        UpdateMoneyUI();
+    }
+    void UpdateMoneyUI()
+    {
+        Moneytext.text = ": " + mainBase.money.ToString();
     }
 }

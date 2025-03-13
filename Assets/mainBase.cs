@@ -7,6 +7,7 @@ using UnityEngine;
 public class MainBase : MonoBehaviour
 {
     public int health = 200;
+    public int money = 100;
 
     // Start is called before the first frame update
     void Start()
