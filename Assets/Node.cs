@@ -17,23 +17,31 @@ public class Node : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
+
+        buildManager = BuildManager.instance;
     }
 
     void OnMouseDown()
     {
+        if(buildManager.GetTurretToBuild() == null)
+            return;
+
         if (turret != null)
         {
             Debug.Log("Hell no");
             return;
         }
 
-        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+        GameObject turretToBuild = buildManager.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position, transform.rotation);
 
     }
 
     void OnMouseEnter()
     {
+        if(buildManager.GetTurretToBuild() == null)
+            return;
+
         rend.material.color = hoverColor;
     }
 
