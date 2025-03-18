@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 public class WaveSpawner : MonoBehaviour
 {
-    [SerializeField] private float countdown = 5f; // countdown for the first wave
-    [SerializeField] private GameObject spawnPoint; // the position where enemies spawn
-    [SerializeField] private Transform[] waypoints; // assign this in the inspector
+    [SerializeField] private float countdown = 5f; // Countdown for the first wave
+    [SerializeField] private GameObject spawnPoint; // The position where enemies spawn
+    [SerializeField] private Transform[] waypoints; // Assign this in the inspector
 
     public Wave[] waves;
     public int currentWaveIndex = 0;

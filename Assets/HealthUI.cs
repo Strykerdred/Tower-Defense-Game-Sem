@@ -5,8 +5,8 @@ using TMPro;
 
 public class HealthUI : MonoBehaviour
 {
-    public MainBase mainBase; // reference to the MainBase script
-    public TextMeshProUGUI healthText; // reference to the ui text
+    public MainBase mainBase; // Reference to the MainBase script
+    public TextMeshProUGUI healthText; // Reference to the UI Text
 
     // Start is called before the first frame update
     void Start()

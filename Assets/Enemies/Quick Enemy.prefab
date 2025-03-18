@@ -126,8 +126,6 @@ MonoBehaviour:
   speed: 5.5
   MobHealth: 5
   waveSpawner: {fileID: 0}
-  moneyValue: 5
-  mainBase: {fileID: 0}
 --- !u!54 &5450990622706071955
 Rigidbody:
   m_ObjectHideFlags: 0
