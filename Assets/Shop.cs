@@ -1,8 +1,11 @@
+using System.Data.SqlTypes;
 using UnityEngine;
 
 public class Shop : MonoBehaviour {
 
     BuildManager buildManager;
+    public WaveSpawner waveSpawner; // WaveSpawner reference
+    public MainBase mainBase; // reference to the MainBase script
 
     void Start ()
     {

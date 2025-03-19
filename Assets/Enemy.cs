@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public float speed = 5f;
     private int currentWaypointIndex = 0;
     public float MobHealth = 10f;
-    private float countdown = 10f;
+    private float countdown = 100f;
     public WaveSpawner waveSpawner; // WaveSpawner reference
     public int moneyValue = 10;
     public MainBase mainBase;
