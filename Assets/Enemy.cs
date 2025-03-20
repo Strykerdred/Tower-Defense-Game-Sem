@@ -12,20 +12,22 @@ public class Enemy : MonoBehaviour
     public WaveSpawner waveSpawner; // WaveSpawner reference
     public int moneyValue = 10;
     public MainBase mainBase;
+    private float originalSpeed; // Store the original speed
 
     // Start is called before the first frame update
     void Start()
     {
+        originalSpeed = speed; // Initialize original speed
+
         if (waveSpawner == null)
         {
             Debug.LogWarning($"{gameObject.name} has no WaveSpawner assigned!");
         }
-        if(mainBase == null)
+        if (mainBase == null)
         {
             mainBase = FindObjectOfType<MainBase>();
         }
     }
-
 
     // Update is called once per frame
     void Update()
@@ -62,6 +64,17 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void ApplySlow(float slowAmount, float duration)
+    {
+        StartCoroutine(SlowCoroutine(slowAmount, duration));
+    }
+
+    private IEnumerator SlowCoroutine(float slowAmount, float duration)
+    {
+        speed *= slowAmount;
+        yield return new WaitForSeconds(duration);
+        speed = originalSpeed;
+    }
 
     public void Die()
     {

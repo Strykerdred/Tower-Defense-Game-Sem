@@ -1,9 +1,7 @@
-
 using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    
     public static BuildManager instance;
 
     void Awake()
@@ -24,7 +22,7 @@ public class BuildManager : MonoBehaviour
 
     private GameObject turretToBuild;
 
-    public GameObject GetTurretToBuild ()
+    public GameObject GetTurretToBuild()
     {
         return turretToBuild;
     }
@@ -34,5 +32,24 @@ public class BuildManager : MonoBehaviour
         turretToBuild = turret;
     }
 
-}
+    public void ClearTurretToBuild()
+    {
+        turretToBuild = null;
+    }
 
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && turretToBuild != null)
+        {
+            // Assuming you have a method to handle the turret placement
+            PlaceTurret();
+            ClearTurretToBuild();
+        }
+    }
+
+    void PlaceTurret()
+    {
+        // Implement the logic to place the turret
+        Debug.Log("Turret placed");
+    }
+}
