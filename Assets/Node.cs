@@ -1,5 +1,5 @@
-
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour
 {
@@ -23,7 +23,10 @@ public class Node : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(buildManager.GetTurretToBuild() == null)
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (buildManager.GetTurretToBuild() == null)
             return;
 
         if (turret != null)
@@ -39,7 +42,10 @@ public class Node : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if(buildManager.GetTurretToBuild() == null)
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (buildManager.GetTurretToBuild() == null)
             return;
 
         rend.material.color = hoverColor;
