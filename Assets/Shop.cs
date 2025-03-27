@@ -57,9 +57,9 @@ public class Shop : MonoBehaviour
 
     public void PurchaseChief()
     {
-        if (mainBase.money >= 150)
+        if (mainBase.money >= 125)
         {
-            mainBase.money -= 150;
+            mainBase.money -= 125;
             Debug.Log("THE Master Chief Purchased");
             buildManager.SetTurretToBuild(buildManager.fourthTurret);
         }
