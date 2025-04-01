@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -45,6 +46,10 @@ public class WaveSpawner : MonoBehaviour
         {
             readyToCountDown = true;
             currentWaveIndex++;
+        }
+        if (currentWaveIndex == 15)
+        {
+            SceneManager.LoadScene("NextSceneName"); // Replace "NextSceneName" with the actual scene name
         }
     }
 
