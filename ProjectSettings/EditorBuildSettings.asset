@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map2.unity
     guid: 24b104761f621dc4c864ef968593b60c
+  - enabled: 1
+    path: Assets/Scenes/Death Screen.unity
+    guid: fc17370c0cb94034ea4e4be4c1303286
+  - enabled: 1
+    path: Assets/Scenes/Win Screen.unity
+    guid: 602d563d549168246ac0cd34d3802703
   m_configObjects: {}
