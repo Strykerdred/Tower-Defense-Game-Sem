@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainBase : MonoBehaviour
 {
@@ -18,7 +19,11 @@ public class MainBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (health <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
