@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public int moneyValue = 10;
     public MainBase mainBase;
     private float originalSpeed; // Store the original speed
+    private bool dead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -58,8 +59,9 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         MobHealth -= damage;
-        if (MobHealth <= 0)
+        if (MobHealth <= 0 && !dead)
         {
+            dead = true;
             Die();
         }
     }
@@ -78,6 +80,7 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+        print("enemy died");
         waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
         mainBase.money += moneyValue;
         Destroy(gameObject);

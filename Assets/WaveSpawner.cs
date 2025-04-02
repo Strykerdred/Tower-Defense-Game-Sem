@@ -42,7 +42,7 @@ public class WaveSpawner : MonoBehaviour
             StartCoroutine(SpawnWave());
         }
 
-        if (waves[currentWaveIndex].enemiesLeft == 0) //&& !readyToCountDown && currentWaveIndex < waves.Length -1)
+        if (waves[currentWaveIndex].enemiesLeft <= 0 && !readyToCountDown && currentWaveIndex < waves.Length - 1) //&& !readyToCountDown && currentWaveIndex < waves.Length -1)
         {
             readyToCountDown = true;
             currentWaveIndex++;
