@@ -128,6 +128,7 @@ MonoBehaviour:
   waveSpawner: {fileID: 0}
   moneyValue: 200
   mainBase: {fileID: 0}
+  kaboom: {fileID: 8300000, guid: 8cae67a4cc82a3b40a9a7677daf47411, type: 3}
 --- !u!54 &5030516866613594981
 Rigidbody:
   m_ObjectHideFlags: 0

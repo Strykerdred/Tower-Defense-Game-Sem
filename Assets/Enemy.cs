@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour
     public MainBase mainBase;
     private float originalSpeed; // Store the original speed
     private bool dead = false;
+    public AudioClip kaboom;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -83,6 +85,17 @@ public class Enemy : MonoBehaviour
         print("enemy died");
         waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
         mainBase.money += moneyValue;
+
+        // Create a temporary GameObject to play the audio
+        GameObject audioObject = new GameObject("KaboomAudio");
+        AudioSource audioSource = audioObject.AddComponent<AudioSource>();
+        audioSource.clip = kaboom;
+        audioSource.Play();
+
+        // Destroy the audio object after the clip finishes playing
+        Destroy(audioObject, kaboom.length);
+
+        // Destroy the enemy object
         Destroy(gameObject);
     }
 }

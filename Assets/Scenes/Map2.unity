@@ -65467,7 +65467,11 @@ MonoBehaviour:
     timeToNextEnemy: 4
     timeToNextWave: 3
     enemiesLeft: 0
-  currentWaveIndex: 0
+  - enemies: []
+    timeToNextEnemy: 0
+    timeToNextWave: 0
+    enemiesLeft: 0
+  currentWaveIndex: 14
 --- !u!4 &1783432606
 Transform:
   m_ObjectHideFlags: 0
