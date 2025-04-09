@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fce5a8143917c184b963ac87e2fe2d32, type: 2}
+  - {fileID: 2100000, guid: 614ee329145d87d4386d1e71e0d64839, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,6 +126,8 @@ MonoBehaviour:
   speed: 1.5
   MobHealth: 20
   waveSpawner: {fileID: 0}
+  moneyValue: 10
+  mainBase: {fileID: 0}
 --- !u!54 &5450990622706071955
 Rigidbody:
   m_ObjectHideFlags: 0
