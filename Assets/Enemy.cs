@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     public WaveSpawner waveSpawner; // WaveSpawner reference
     public int moneyValue = 10;
     public MainBase mainBase;
-    private float originalSpeed; // Store the original speed
+    private float originalSpeed; // remembers the original speed
     private bool dead = false;
     public AudioClip kaboom;
     
@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        originalSpeed = speed; // Initialize original speed
+        originalSpeed = speed; // back to normal speed
 
         if (waveSpawner == null)
         {
@@ -86,16 +86,15 @@ public class Enemy : MonoBehaviour
         waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
         mainBase.money += moneyValue;
 
-        // Create a temporary GameObject to play the audio
+        // Make object to play sound or else it wont play.
         GameObject audioObject = new GameObject("KaboomAudio");
         AudioSource audioSource = audioObject.AddComponent<AudioSource>();
         audioSource.clip = kaboom;
         audioSource.Play();
 
-        // Destroy the audio object after the clip finishes playing
+        // after audio clip finishes it kills object
         Destroy(audioObject, kaboom.length);
 
-        // Destroy the enemy object
         Destroy(gameObject);
     }
 }

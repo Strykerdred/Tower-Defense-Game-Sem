@@ -36,12 +36,12 @@ public class MainBase : MonoBehaviour
     {
         Debug.Log("Damage Taken");
 
-        // Get the Enemypathing component from the enemy object
+        // connecting to enemy script
         Enemy enemyScript = enemy.GetComponent<Enemy>();
 
-        if (enemyScript != null)  // Ensure the exists
+        if (enemyScript != null)  // makes sure it exists
         {
-            TakeDamage((int)enemyScript.MobHealth); //Convert float to int
+            TakeDamage((int)enemyScript.MobHealth); // Convert float to int
         }
 
         enemyScript.Die();

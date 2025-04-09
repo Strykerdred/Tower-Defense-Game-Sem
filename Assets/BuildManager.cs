@@ -13,7 +13,7 @@ public class BuildManager : MonoBehaviour
         }
         instance = this;
     }
-
+    // list of turrents
     public GameObject standardTurret;
     public GameObject anotherTurret;
     public GameObject thirdTurret;
@@ -41,7 +41,7 @@ public class BuildManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && turretToBuild != null)
         {
-            // Assuming you have a method to handle the turret placement
+            // place tower system
             PlaceTurret();
             ClearTurretToBuild();
         }
@@ -49,7 +49,7 @@ public class BuildManager : MonoBehaviour
 
     void PlaceTurret()
     {
-        // Implement the logic to place the turret
+        // check if it worked
         Debug.Log("Turret placed");
     }
 }

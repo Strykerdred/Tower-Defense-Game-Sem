@@ -6,9 +6,9 @@ public class Projectile : MonoBehaviour
 {
     public float speed = 10f;
     public float damage = 1f;
-    public bool applySlowingEffect = false; // New property to enable/disable slowing effect
-    public float slowAmount = 0.5f; // Amount to slow the enemy
-    public float slowDuration = 2f; // Duration of the slowing effect
+    public bool applySlowingEffect = false; // turn on and off to make bullet slow
+    public float slowAmount = 0.5f; // make enemy slow
+    public float slowDuration = 2f; // slow effect time effect
 
     private Transform target; // The enemy to follow
 
@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
             return;
         }
 
-        // Move to enemy
+        // bullet move to enemy
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 
         // Make the projectile point towards the enemy
@@ -48,7 +48,7 @@ public class Projectile : MonoBehaviour
                 }
             }
 
-            Destroy(gameObject); // Destroy the projectile when it touches enemy
+            Destroy(gameObject); // Destroy the projectile when it touches enemys
         }
     }
 }

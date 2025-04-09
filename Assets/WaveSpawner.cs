@@ -14,7 +14,7 @@ public class WaveSpawner : MonoBehaviour
     private bool readyToCountDown = true;
 
     private void Start()
-    {
+    { //checks for waves
         for (int i = 0; i < waves.Length; i++)
         {
             waves[i].enemiesLeft = waves[i].enemies.Length;
@@ -25,7 +25,7 @@ public class WaveSpawner : MonoBehaviour
     {
         print(waves[currentWaveIndex].enemiesLeft);
         if (currentWaveIndex >= waves.Length)
-        {
+        { //debug tog see if you finished game.
             Debug.Log("You survived every wave!");
             return;
         }
@@ -48,7 +48,7 @@ public class WaveSpawner : MonoBehaviour
             currentWaveIndex++;
         }
         if (currentWaveIndex == 15)
-        {
+        { //win screen after 15 waves
             SceneManager.LoadScene("WinScreen");
         }
     }
@@ -56,7 +56,7 @@ public class WaveSpawner : MonoBehaviour
     private IEnumerator SpawnWave()
     {
         if (currentWaveIndex < waves.Length)
-        {
+        { // check if there are more waves
             for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
             {
                 Enemy enemy = Instantiate(waves[currentWaveIndex].enemies[i], spawnPoint.transform.position, spawnPoint.transform.rotation);
